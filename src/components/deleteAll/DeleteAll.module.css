@@ -1,0 +1,24 @@
+.del_all_section {
+  display: flex;
+  justify-content: flex-end;
+  gap: 60%;
+  align-items: center;
+  height: 30px;
+  margin-bottom: 20px;
+}
+.btn_del_all {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(240, 128, 108);
+  transition-property: box-shadow, transform;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+
+.btn_del_all:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 2px 1px 0px #2e2f4214, 1px 3px 15px 3px #422e3a29,
+    0px 1px 6px 1px #2e2f4214;
+}

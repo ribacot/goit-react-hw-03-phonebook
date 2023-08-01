@@ -1,0 +1,60 @@
+.form_Add_Contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.decor_input {
+  display: flex;
+  flex-direction: column;
+}
+.lable {
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.56);
+}
+.input {
+  width: 50%;
+  border: none;
+  border-radius: 6px;
+  padding: 5px;
+  box-shadow: 1px 2px 1px 0px #2e2f4214, 1px 3px 15px 6px #422e3a29,
+    0px 1px 6px 0px #2e2f4214;
+
+  transition-property: box-shadow;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+.input:hover,
+.input:focus {
+  box-shadow: 1px 2px 1px 0px #454bbf14, 1px 3px 15px 6px #7260c429,
+    0px 1px 6px 0px #4046b614;
+}
+
+.btn_add {
+  padding: 5px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: green;
+  text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.56);
+  box-shadow: 1px 2px 1px 0px #2e2f4214, 1px 3px 15px 6px #422e3a29,
+    0px 1px 6px 0px #2e2f4214;
+
+  transition-property: box-shadow, transform, background-color;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+.btn_add:hover,
+.btn_add:focus {
+  transform: scale(1.02);
+  box-shadow: 1px 2px 1px 0px #177f414a, 1px 3px 15px 6px #25713e29,
+    0px 1px 6px 0px #2e2f4214;
+}
+
+.btn_add:disabled {
+  background-color: rgb(225, 73, 73);
+  transform: none;
+  box-shadow: 1px 2px 1px 0px #2e2f4214, 1px 3px 15px 6px #422e3a29,
+    0px 1px 6px 0px #2e2f4214;
+}

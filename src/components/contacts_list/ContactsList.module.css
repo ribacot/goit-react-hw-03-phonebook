@@ -1,0 +1,38 @@
+.listContacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 1px 2px 1px 0px #2e2f4214, 1px 3px 15px 6px #422e3a29,
+    0px 1px 6px 0px #2e2f4214;
+}
+.contact_tel {
+  display: flex;
+  gap: 5px;
+}
+.btn_del {
+  display: flex;
+  border: none;
+  background-color: inherit;
+  padding: 3px;
+  color: rgb(244, 22, 63);
+  transition-property: box-shadow, transform, color;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+.btn_del:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 2px 1px 0px #2e2f4214, 1px 3px 1px 0px #422e3a29,
+    0px 1px 6px 0px #2e2f4214;
+}
+.btn_del:disabled {
+  transform: none;
+  color: gray;
+  box-shadow: none;
+}
