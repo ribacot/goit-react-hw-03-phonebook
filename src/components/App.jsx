@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 
 import Container from './container/Container';
 import FormPhone from './form/FormPhone';
-import ContactsList from './contacts_list/ContactsList';
+import {ContactsList} from './contacts_list/ContactsList';
 import Search from './search/Search';
 
 const INITIAL_STATE = {
@@ -16,12 +16,13 @@ export class App extends Component {
     ...INITIAL_STATE,
   };
 
-  componentDidMount() {
+  componentDidMount(_, prevState) {
     const contacts = JSON.parse(localStorage.getItem(contactsLs)) || [];
-this.setState({contacts})
-
+    this.setState({ contacts });
   }
-  componentDidUpdate() {
+  componentDidUpdate(_, prevState) {
+    if (prevState.contacts.length !== this.state.contacts.length)
+      console.log('upd');
     localStorage.setItem(contactsLs, JSON.stringify(this.state.contacts));
   }
 
@@ -63,7 +64,7 @@ this.setState({contacts})
   };
 
   render() {
-    console.log('re-render')
+    console.log('re-render');
     return (
       <>
         <Container title="Phone book">
